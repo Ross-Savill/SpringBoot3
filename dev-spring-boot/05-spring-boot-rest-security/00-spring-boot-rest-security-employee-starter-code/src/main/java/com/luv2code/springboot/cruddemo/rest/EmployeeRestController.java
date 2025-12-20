@@ -99,6 +99,14 @@ public class EmployeeRestController {
         return dbEmployee;
     }
 
+    @DeleteMapping("/employees/{employeeId}")
+    public String deleteEmployee(@PathVariable int employeeId) {
+
+        employeeService.deleteById(employeeId);
+
+        return "Deleted employee id - " + employeeId;
+    }
+
 }
 
 
