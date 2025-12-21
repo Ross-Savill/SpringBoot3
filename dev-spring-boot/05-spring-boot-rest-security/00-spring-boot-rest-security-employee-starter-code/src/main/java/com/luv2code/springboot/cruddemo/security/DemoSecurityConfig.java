@@ -50,8 +50,8 @@ public class DemoSecurityConfig {
             // use HTTP Basic authentication
         http.httpBasic(Customizer.withDefaults());
 
-        // disable CSRF protection
-        // in general, not required for stateless REST APIs that use POST, PUT, DELETE and/or PATCH
+        // Disable CSRF protection
+        // In general, not required for stateless REST APIs that use POST, PUT, DELETE and/or PATCH
 
         http.csrf(csrf -> csrf.disable());
 
