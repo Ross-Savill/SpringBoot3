@@ -39,9 +39,11 @@
 
     Favourite Operating Systems:
 
-    <input type="checkbox" th:field="*{favouriteSystems}" th:value="Linux" /> Linux
-    <input type="checkbox" th:field="*{favouriteSystems}" th:value="macOS" /> macOS
-    <input type="checkbox" th:field="*{favouriteSystems}" th:value="'Microsoft Windows'" /> Microsoft Windows
+    <input type="checkbox" th:field="*{favouriteSystems}"
+                           th:each="tempSystem : ${operatingSystems}"
+           th:value="${tempSystem}"
+                            th:text="${tempSystem}"
+    /> Linux
 
     <br><br>
 
